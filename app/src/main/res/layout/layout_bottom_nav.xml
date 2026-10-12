@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="#1B2E3C"
+    android:orientation="horizontal"
+    android:weightSum="5">
+
+    <!-- Opción 1: Menú -->
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="16dp"
+        android:src="@drawable/Salir"
+        android:contentDescription="Menú" />
+
+    <!-- Opción 2: Inicio -->
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="16dp"
+        android:src="@drawable/Inicio"
+        android:contentDescription="Inicio" />
+
+    <!-- Opción 3: Guías -->
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="16dp"
+        android:src="@drawable/Guias"
+        android:contentDescription="Guías" />
+
+    <!-- Opción 4: Constancia -->
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="16dp"
+        android:src="@drawable/Preconstancia"
+        android:contentDescription="Constancia" />
+
+    <!-- Opción 5: Perfil -->
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="16dp"
+        android:src="@drawable/Perfil"
+        android:contentDescription="Perfil" />
+
+</LinearLayout>

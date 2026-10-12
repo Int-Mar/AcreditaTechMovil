@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.hygeonix.myapplication"
+    namespace = "com.hygeonix.AcreditaTech"
     compileSdk {
         version = release(36)
     }

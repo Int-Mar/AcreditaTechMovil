@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#253A49">
+
+    <!-- ENCABEZADO SUPERIOR CENTRADO -->
+    <LinearLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="#1B2E3C"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="36dp"
+            android:contentDescription="@string/desc_logo_acreditatech"
+            android:src="@drawable/LogoBlanco" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="serif"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- CONTENEDOR CENTRAL CON SCROLL -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/layoutHeader"
+        app:layout_constraintBottom_toTopOf="@id/includeBottomNav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="24dp">
+
+            <!-- FOTO DE PERFIL / CÍRCULO SUPERIOR -->
+            <ImageView
+                android:id="@+id/imgAvatar"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_circle_avatar"
+                android:backgroundTint="#E0E0E0"
+                android:contentDescription="Avatar"
+                android:padding="16dp"
+                android:src="@drawable/Perfil"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- CONTENEDOR AZUL CLARO DE DATOS -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginTop="16dp"
+                android:background="#1D3E5B"
+                android:padding="20dp"
+                app:layout_constraintTop_toBottomOf="@id/imgAvatar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <!-- NOMBRE DEL USUARIO -->
+                <TextView
+                    android:id="@+id/tvUserNameLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="David Marlon Malagon"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <!-- Etiqueta "Editor" debajo del nombre -->
+                <TextView
+                    android:id="@+id/tvEditorName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Editor"
+                    android:textColor="#B0BEC5"
+                    android:textSize="11sp"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    app:layout_constraintTop_toBottomOf="@id/tvUserNameLabel"
+                    app:layout_constraintStart_toStartOf="@id/tvUserNameLabel" />
+
+                <!-- TÍTULO OFICIO -->
+                <TextView
+                    android:id="@+id/tvOficioTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="OFICIO"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/tvEditorName"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <!-- CAMPO 1: CORREO ELECTRÓNICO -->
+                <EditText
+                    android:id="@+id/etEmailProfile"
+                    android:layout_width="0dp"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#D9D9D9"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:inputType="textEmailAddress"
+                    android:paddingHorizontal="12dp"
+                    android:text="Correo Electrónico"
+                    android:textColor="@android:color/black"
+                    android:textSize="13sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvOficioTitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvEditorEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Editor"
+                    android:textColor="#B0BEC5"
+                    android:textSize="10sp"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    app:layout_constraintTop_toBottomOf="@id/etEmailProfile"
+                    app:layout_constraintStart_toStartOf="@id/etEmailProfile" />
+
+                <!-- CAMPO 2: CONTRASEÑA -->
+                <EditText
+                    android:id="@+id/etPasswordProfile"
+                    android:layout_width="0dp"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#D9D9D9"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:inputType="textPassword"
+                    android:paddingHorizontal="12dp"
+                    android:text="Contraseña"
+                    android:textColor="@android:color/black"
+                    android:textSize="13sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvEditorEmail"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvEditorPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Editor"
+                    android:textColor="#B0BEC5"
+                    android:textSize="10sp"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    app:layout_constraintTop_toBottomOf="@id/etPasswordProfile"
+                    app:layout_constraintStart_toStartOf="@id/etPasswordProfile" />
+
+                <!-- CAMPO 3: TELÉFONO DE CONTACTO -->
+                <EditText
+                    android:id="@+id/etPhoneProfile"
+                    android:layout_width="0dp"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#D9D9D9"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:inputType="phone"
+                    android:paddingHorizontal="12dp"
+                    android:text="Telefono de contacto"
+                    android:textColor="@android:color/black"
+                    android:textSize="13sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvEditorPassword"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvEditorPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Editor"
+                    android:textColor="#B0BEC5"
+                    android:textSize="10sp"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    app:layout_constraintTop_toBottomOf="@id/etPhoneProfile"
+                    app:layout_constraintStart_toStartOf="@id/etPhoneProfile" />
+
+                <!-- CAMPO 4: ALCALDÍA DE TRABAJO -->
+                <EditText
+                    android:id="@+id/etAlcaldiaProfile"
+                    android:layout_width="0dp"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#D9D9D9"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:inputType="text"
+                    android:paddingHorizontal="12dp"
+                    android:text="Alcaldia de Trabajo"
+                    android:textColor="@android:color/black"
+                    android:textSize="13sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvEditorPhone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvEditorAlcaldia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Editor"
+                    android:textColor="#B0BEC5"
+                    android:textSize="10sp"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    app:layout_constraintTop_toBottomOf="@id/etAlcaldiaProfile"
+                    app:layout_constraintStart_toStartOf="@id/etAlcaldiaProfile" />
+
+                <!-- VENTANA ROJA DE ERROR -->
+                <TextView
+                    android:id="@+id/tvProfileErrorBanner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="#EF9A9A"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="Correo electrónico, nombre o contacto son incorrectos. Verifique sus datos."
+                    android:textColor="#D32F2F"
+                    android:textSize="11sp"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    app:layout_constraintTop_toBottomOf="@id/tvEditorAlcaldia"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <!-- BOTÓN HACER CAMBIOS -->
+                <Button
+                    android:id="@+id/btnEditSaveProfile"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="#152B3C"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Hacer Cambios"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="13sp"
+                    app:cornerRadius="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/tvProfileErrorBanner"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <!-- BARRA INFERIOR REUTILIZABLE -->
+    <include
+        android:id="@+id/includeBottomNav"
+        layout="@layout/layout_bottom_nav"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

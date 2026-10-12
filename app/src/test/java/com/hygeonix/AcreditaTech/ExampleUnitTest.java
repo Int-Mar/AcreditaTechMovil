@@ -1,4 +1,4 @@
-package com.hygeonix.myapplication;
+package com.hygeonix.AcreditaTech;
 
 import org.junit.Test;
 
