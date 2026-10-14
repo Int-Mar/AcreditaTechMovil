@@ -5,54 +5,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#253A49">
+    android:background="?attr/appBackgroundColor">
 
-    <!-- Capa de Color Semitransparente Reutilizable -->
-    <View
+    <!-- ENCABEZADO SUPERIOR REUTILIZABLE -->
+    <include
+        android:id="@+id/includeTopBar"
+        layout="@layout/layout_top_bar"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/bg_background"
+        android:layout_height="70dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- ENCABEZADO SUPERIOR AZUL -->
-    <LinearLayout
-        android:id="@+id/layoutTopBar"
-        android:layout_width="0dp"
-        android:layout_height="70dp"
-        android:background="#1B2E3C"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <ImageView
-            android:layout_width="32dp"
-            android:layout_height="36dp"
-            android:contentDescription="@string/desc_logo_acreditatech"
-            android:src="@drawable/LogoBlanco" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:fontFamily="serif"
-            android:text="@string/app_name"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <!-- CONTENEDOR PRINCIPAL DEL PANEL (Scrollable para pantallas pequeñas) -->
+    <!-- CONTENEDOR PRINCIPAL DEL PANEL -->
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:fillViewport="true"
-        app:layout_constraintTop_toBottomOf="@id/layoutTopBar"
-        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
+        app:layout_constraintTop_toBottomOf="@id/includeTopBar"
+        app:layout_constraintBottom_toTopOf="@id/includeBottomNav"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
@@ -66,8 +37,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Panel de usuario"
-                android:textColor="@android:color/white"
+                android:text="@string/user_panel_title"
+                android:textColor="?attr/appTextColor"
                 android:textSize="22sp"
                 android:textStyle="bold"
                 android:fontFamily="sans-serif-medium" />
@@ -75,8 +46,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Menú Principal"
-                android:textColor="#B0BEC5"
+                android:text="@string/user_panel_subtitle"
+                android:textColor="#78909C"
                 android:textSize="14sp"
                 android:layout_marginBottom="16dp" />
 
@@ -87,7 +58,7 @@
                 android:layout_marginBottom="16dp"
                 app:cardCornerRadius="14dp"
                 app:cardElevation="4dp"
-                app:cardBackgroundColor="#FDFBF7">
+                app:cardBackgroundColor="?attr/appCardColor">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -98,28 +69,28 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Test Técnico"
-                        android:textColor="@android:color/black"
+                        android:text="@string/test_tecnico_title"
+                        android:textColor="#000000"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Visualiza tu resultado obtenido"
-                        android:textColor="#666666"
+                        android:text="@string/test_visualize_desc"
+                        android:textColor="#78909C"
                         android:textSize="13sp"
                         android:layout_marginBottom="12dp" />
 
                     <Button
                         android:id="@+id/btnVisualizarTecnico"
                         android:layout_width="match_parent"
-                        android:layout_height="42dp"
-                        android:text="Visualizar"
+                        android:layout_height="48dp"
+                        android:text="@string/btn_visualizar"
                         android:textColor="@android:color/white"
                         android:textAllCaps="false"
                         android:fontFamily="sans-serif-medium"
-                        android:backgroundTint="#1D3E5B"
+                        android:backgroundTint="@color/btn_general"
                         app:cornerRadius="8dp" />
 
                 </LinearLayout>
@@ -132,7 +103,7 @@
                 android:layout_marginBottom="16dp"
                 app:cardCornerRadius="14dp"
                 app:cardElevation="4dp"
-                app:cardBackgroundColor="#FDFBF7">
+                app:cardBackgroundColor="?attr/appCardColor">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -143,28 +114,28 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Test Ocupacional"
-                        android:textColor="@android:color/black"
+                        android:text="@string/test_ocupacional_title"
+                        android:textColor="#000000"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Visualiza tu resultado obtenido"
-                        android:textColor="#666666"
+                        android:text="@string/test_visualize_desc"
+                        android:textColor="#78909C"
                         android:textSize="13sp"
                         android:layout_marginBottom="12dp" />
 
                     <Button
                         android:id="@+id/btnVisualizarOcupacional"
                         android:layout_width="match_parent"
-                        android:layout_height="42dp"
-                        android:text="Visualizar"
+                        android:layout_height="48dp"
+                        android:text="@string/btn_visualizar"
                         android:textColor="@android:color/white"
                         android:textAllCaps="false"
                         android:fontFamily="sans-serif-medium"
-                        android:backgroundTint="#1D3E5B"
+                        android:backgroundTint="@color/btn_general"
                         app:cornerRadius="8dp" />
 
                 </LinearLayout>
@@ -177,7 +148,7 @@
                 android:layout_marginBottom="8dp"
                 app:cardCornerRadius="14dp"
                 app:cardElevation="4dp"
-                app:cardBackgroundColor="#FDFBF7">
+                app:cardBackgroundColor="?attr/appCardColor">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -188,28 +159,28 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Guías"
-                        android:textColor="@android:color/black"
+                        android:text="@string/test_final"
+                        android:textColor="#000000"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Prepárate con ayuda de tus guías"
-                        android:textColor="#666666"
+                        android:text="@string/test_visualize_desc"
+                        android:textColor="#78909C"
                         android:textSize="13sp"
                         android:layout_marginBottom="12dp" />
 
                     <Button
-                        android:id="@+id/btnEntrarGuias"
+                        android:id="@+id/btnVisualizarFinal"
                         android:layout_width="match_parent"
-                        android:layout_height="42dp"
-                        android:text="Entrar"
+                        android:layout_height="48dp"
+                        android:text="@string/btn_visualizar"
                         android:textColor="@android:color/white"
                         android:textAllCaps="false"
                         android:fontFamily="sans-serif-medium"
-                        android:backgroundTint="#1D3E5B"
+                        android:backgroundTint="@color/btn_general"
                         app:cornerRadius="8dp" />
 
                 </LinearLayout>
@@ -218,63 +189,14 @@
         </LinearLayout>
     </ScrollView>
 
-    <!-- BARRA DE NAVEGACIÓN INFERIOR (BottomNavigationView o barra personalizada) -->
-    <LinearLayout
-        android:id="@+id/bottomNavigation"
+    <!-- BARRA DE NAVEGACIÓN INFERIOR REUTILIZABLE -->
+    <include
+        android:id="@+id/includeBottomNav"
+        layout="@layout/layout_bottom_nav"
         android:layout_width="0dp"
         android:layout_height="60dp"
-        android:background="#1B2E3C"
-        android:orientation="horizontal"
-        android:weightSum="5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <!-- Opción 1: Menú -->
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="16dp"
-            android:src="@drawable/Salir"
-            android:contentDescription="Menú" />
-
-        <!-- Opción 2: Inicio -->
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="16dp"
-            android:src="@drawable/Inicio"
-            android:contentDescription="Inicio" />
-
-        <!-- Opción 3: Libros/Guías -->
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="16dp"
-            android:src="@drawable/Guias"
-            android:contentDescription="Guías" />
-
-        <!-- Opción 4: Constancia/Tarjeta -->
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="16dp"
-            android:src="@drawable/Preconstancia"
-            android:contentDescription="Constancia" />
-
-        <!-- Opción 5: Perfil -->
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="16dp"
-            android:src="@drawable/Perfil"
-            android:contentDescription="Perfil" />
-    </LinearLayout>
-
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

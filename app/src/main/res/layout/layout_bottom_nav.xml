@@ -3,53 +3,73 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="60dp"
-    android:background="#1B2E3C"
+    android:background="?attr/appHeaderColor"
     android:orientation="horizontal"
     android:weightSum="5">
 
-    <!-- Opción 1: Menú -->
+    <!-- Opción 1 -->
     <ImageView
+        android:id="@+id/navMenu"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:padding="16dp"
-        android:src="@drawable/Salir"
-        android:contentDescription="Menú" />
+        android:src="@drawable/menu"
+        android:contentDescription="Menú"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true" />
 
-    <!-- Opción 2: Inicio -->
+    <!-- Opción 2: Inicio / Panel Principal -->
     <ImageView
+        android:id="@+id/navHome"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:padding="16dp"
-        android:src="@drawable/Inicio"
-        android:contentDescription="Inicio" />
+        android:src="@drawable/inicio"
+        android:contentDescription="Inicio"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true" />
 
     <!-- Opción 3: Guías -->
     <ImageView
+        android:id="@+id/navGuides"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:padding="16dp"
-        android:src="@drawable/Guias"
-        android:contentDescription="Guías" />
+        android:src="@drawable/guias"
+        android:contentDescription="Guías"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true" />
 
     <!-- Opción 4: Constancia -->
     <ImageView
+        android:id="@+id/navConstancia"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:padding="16dp"
-        android:src="@drawable/Preconstancia"
-        android:contentDescription="Constancia" />
+        android:src="@drawable/preconstancia"
+        android:contentDescription="Constancia"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true" />
 
     <!-- Opción 5: Perfil -->
     <ImageView
+        android:id="@+id/navPerfil"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:padding="16dp"
-        android:src="@drawable/Perfil"
-        android:contentDescription="Perfil" />
+        android:src="@drawable/perfil"
+        android:contentDescription="Perfil"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true" />
 
 </LinearLayout>

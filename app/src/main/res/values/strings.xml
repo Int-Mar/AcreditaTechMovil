@@ -1,4 +1,31 @@
 <resources>
     <string name="app_name">AcreditaTech</string>
-    <string name="desc_logo_acreditatech">AcreditaTech</string>
+    <string name="desc_logo_acreditatech">Logo AcreditaTech</string>
+
+    <!-- Textos para el Panel de Usuario -->
+    <string name="user_panel_title">Panel de usuario</string>
+    <string name="user_panel_subtitle">Menú Principal</string>
+    <string name="test_tecnico_title">Test Técnico</string>
+    <string name="test_ocupacional_title">Test Ocupacional</string>
+    <string name="test_final">Test Final</string>
+    <string name="guias_title">Guías</string>
+
+    <string name="test_visualize_desc">Visualiza tu resultado obtenido</string>
+    <string name="btn_visualizar">Visualizar</string>
+    <string name="btn_entrar">Entrar</string>
+
+    <!-- Textos para la Pantalla de Login -->
+    <string name="bg_top_desc">Fondo superior decorativo</string>
+    <string name="bg_bottom_desc">Fondo inferior decorativo</string>
+    <string name="logo_institutional_desc">Logo institucional</string>
+    <string name="login_title">Iniciar Sesión</string>
+    <string name="login_email_label">Correo electrónico</string>
+    <string name="login_email_hint">ejemplo: juanpg@gmail.com</string>
+    <string name="login_password_label">Contraseña</string>
+    <string name="login_password_hint">Mínimo 8 caracteres</string>
+
+    <!-- Textos para la Pantalla de terminos -->
+    <string name="Terms">Términos y Condiciones</string>
+    <string name="Terms_cont">Aquí van todos los terminos y condiciones</string>
+
 </resources>

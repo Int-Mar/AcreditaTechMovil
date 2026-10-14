@@ -5,93 +5,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#253A49">
+    android:background="?attr/appBackgroundColor">
 
-    <!-- ENCABEZADO SUPERIOR CENTRADO -->
-    <LinearLayout
-        android:id="@+id/layoutHeader"
+    <!-- ENCABEZADO SUPERIOR REUTILIZABLE -->
+    <include
+        android:id="@+id/includeTopBar"
+        layout="@layout/layout_top_bar"
         android:layout_width="0dp"
         android:layout_height="70dp"
-        android:background="#1B2E3C"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:paddingHorizontal="16dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <ImageView
-            android:layout_width="32dp"
-            android:layout_height="36dp"
-            android:contentDescription="@string/desc_logo_acreditatech"
-            android:src="@drawable/LogoBlanco" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:fontFamily="serif"
-            android:text="@string/app_name"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <!-- DATOS DE USUARIO Y TÍTULO DE SECCIÓN -->
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:id="@+id/layoutUserTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:paddingHorizontal="24dp"
         android:layout_marginTop="12dp"
-        app:layout_constraintTop_toBottomOf="@id/layoutHeader"
+        app:layout_constraintTop_toBottomOf="@id/includeTopBar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/btnOptions">
-
-            <TextView
-                android:id="@+id/txtUserName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="David Marlon Malagon Fuentes"
-                android:textColor="@android:color/white"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:fontFamily="sans-serif-medium" />
-
-            <TextView
-                android:id="@+id/txtSectionSubtitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pre-Constancia"
-                android:textColor="#B0BEC5"
-                android:textSize="13sp"
-                android:fontFamily="sans-serif" />
-        </LinearLayout>
-
-        <!-- Tres puntos de opciones -->
         <TextView
-            android:id="@+id/btnOptions"
+            android:id="@+id/txtUserName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="⋮"
-            android:textColor="@android:color/white"
+            android:text="David Marlon Malagon Fuentes"
+            android:textColor="?attr/appTextColor"
             android:textSize="22sp"
             android:textStyle="bold"
-            android:padding="4dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            android:fontFamily="sans-serif-medium" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/txtSectionSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pre-Constancia"
+            android:textColor="#B0BEC5"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif" />
+    </LinearLayout>
 
     <!-- TARJETA BLANCA TIPO DOCUMENTO -->
     <androidx.cardview.widget.CardView
@@ -104,6 +60,7 @@
         android:layout_marginBottom="12dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
+        app:cardBackgroundColor="?attr/appCardColor"
         app:layout_constraintTop_toBottomOf="@id/layoutUserTitle"
         app:layout_constraintBottom_toTopOf="@id/btnDownload"
         app:layout_constraintStart_toStartOf="parent"
@@ -151,8 +108,7 @@
                             android:layout_width="28dp"
                             android:layout_height="28dp"
                             android:contentDescription="Logo Azul"
-                            android:src="@drawable/LogoBlanco"
-                            app:tint="#1D3E5B" />
+                            android:src="@drawable/logoazul" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -180,7 +136,7 @@
                         android:layout_height="56dp"
                         android:background="@drawable/bg_circle_avatar"
                         android:backgroundTint="#E0E0E0"
-                        android:src="@drawable/Perfil"
+                        android:src="@drawable/perfil"
                         app:tint="#253A49"
                         android:padding="12dp"
                         android:contentDescription="Avatar Documento" />
@@ -279,11 +235,11 @@
     <Button
         android:id="@+id/btnDownload"
         android:layout_width="0dp"
-        android:layout_height="46dp"
+        android:layout_height="48dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="12dp"
-        android:backgroundTint="#1B2E3C"
+        android:backgroundTint="#1D3E5B"
         android:text="Descargar Pre-Constancia"
         android:textAllCaps="false"
         android:textColor="@android:color/white"

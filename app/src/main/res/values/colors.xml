@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Tus colores actuales (Modo Oscuro) -->
+    <color name="primary_bg">#253A49</color>
+    <color name="header_bg">#1B2E3C</color>
+    <color name="card_bg">#FFFFFF</color>
+    <color name="text_main">@android:color/white</color>
+
+    <!-- Nuevos colores para Modo Claro (Azul Cielo) -->
+    <color name="light_primary_bg">#F0F4F8</color>     <!-- Fondo general clarito -->
+    <color name="light_header_bg">#4A90E2</color>    <!-- Azul cielo para el encabezado -->
+    <color name="light_card_bg">#FFFFFF</color>        <!-- Tarjetas blancas -->
+    <color name="light_text_main">#1B2E3C</color>      <!-- Texto oscuro para buen contraste -->
+    <color name="btn_general">#1D3E5B</color>          <!-- Color de botones -->
 </resources>

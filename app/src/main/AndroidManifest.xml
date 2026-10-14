@@ -11,15 +11,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AcreditaTech">
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
+
+        <!-- Pantalla de Inicio / Splash -->
+        <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Pantallas de Autenticación y Flujo Inicial -->
+        <activity android:name=".TermsActivity" android:exported="false" />
+        <activity android:name=".LoginActivity" android:exported="false" />
+
+        <!-- Pantallas Principales de la Barra de Navegación -->
+        <activity android:name=".MenuActivity" android:exported="false" />
+        <activity android:name=".TestResultActivity" android:exported="false" />
+        <activity android:name=".GuidesActivity" android:exported="false" />
+        <activity android:name=".DetalleGuiaActivity" android:exported="false" />
+        <activity android:name=".ConstanciaActivity" android:exported="false" />
+        <activity android:name=".PerfilActivity" android:exported="false" />
+
     </application>
 
 </manifest>

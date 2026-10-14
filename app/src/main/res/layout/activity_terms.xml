@@ -2,10 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#253A49">
+    android:background="?attr/appBackgroundColor">
 
     <!-- Mitad Superior: Imagen de Plantilla Oficio -->
     <ImageView
@@ -14,6 +13,7 @@
         android:layout_height="0dp"
         android:scaleType="centerCrop"
         android:src="@drawable/plantillaoficio"
+        android:contentDescription="@string/desc_logo_acreditatech"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/guidelineCenter"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,6 +26,7 @@
         android:layout_height="0dp"
         android:scaleType="centerCrop"
         android:src="@drawable/plantillaoficio"
+        android:contentDescription="@string/desc_logo_acreditatech"
         app:layout_constraintTop_toBottomOf="@+id/guidelineCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +40,7 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="366dp" />
 
-    <!-- Capa de Color Semitransparente Reutilizable (bg_background.xml) -->
+    <!-- Capa de Color Semitransparente Reutilizable -->
     <View
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -49,21 +50,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Encabezado Superior (Logo + Texto con fuente Serif) -->
-    <LinearLayout
-        android:id="@+id/layoutHeader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:layout_marginTop="32dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-    </LinearLayout>
-
-    <!-- Tarjeta Blanca de Términos y Condiciones -->
+    <!-- Tarjeta Blanca/Oscura de Términos y Condiciones adaptativa -->
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -71,6 +58,7 @@
         android:layout_marginEnd="24dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
+        
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -83,12 +71,12 @@
             android:padding="24dp"
             android:gravity="center_horizontal">
 
-            <!-- Título de la Tarjeta -->
+            <!-- Título de la Tarjeta (Usa el color de texto adaptable) -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Términos y Condiciones"
-                android:textColor="@android:color/black"
+                android:text="@string/Terms"
+                android:textColor="?attr/appTextColor"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:fontFamily="sans-serif-medium"
@@ -104,8 +92,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Aquí van todos los terminos y condiciones\nchalalalalaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-                    android:textColor="#555555"
+                    android:text="@string/Terms_cont"
+                    android:textColor="?attr/appTextColor"
                     android:textSize="14sp"
                     android:fontFamily="sans-serif" />
             </ScrollView>
@@ -125,23 +113,30 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
+    <!-- Logo institucional -->
     <ImageView
+        android:id="@+id/imgLogoLogin"
         android:layout_width="88dp"
         android:layout_height="99dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="42dp"
         android:contentDescription="@string/desc_logo_acreditatech"
-        android:src="@drawable/LogoBlanco"
-        tools:layout_editor_absoluteX="82dp"
-        tools:layout_editor_absoluteY="42dp" />
+        android:src="@drawable/logoblanco"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Texto institucional -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="92dp"
         android:fontFamily="serif"
         android:text="@string/app_name"
         android:textColor="@android:color/white"
         android:textSize="22sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="91dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

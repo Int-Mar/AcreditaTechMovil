@@ -1,7 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.AcreditaTech" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    <style name="Theme.AcreditaTech" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="appBackgroundColor">@color/primary_bg</item>
+        <item name="appHeaderColor">@color/header_bg</item>
+        <item name="appCardColor">@color/card_bg</item>
+        <item name="appTextColor">@color/text_main</item>
+        <item name="appInputBgColor">@color/header_bg</item>
     </style>
 </resources>
