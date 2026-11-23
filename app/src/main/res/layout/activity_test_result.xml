@@ -57,7 +57,7 @@
                     android:id="@+id/txtUserName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="David Marlon Malagon Fuentes"
+                    android:text="@string/header_user_default"
                     android:textColor="?attr/appTextColor"
                     android:textSize="22sp"
                     android:textStyle="bold"
@@ -67,7 +67,7 @@
                     android:id="@+id/txtTestTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Calificación de Test Técnico"
+                    android:text="@string/result_titulo_tecnico"
                     android:textColor="#78909C"
                     android:textSize="14sp"
                     android:fontFamily="sans-serif" />
@@ -93,8 +93,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Calificación:"
-                        android:textColor="?attr/appTextColor"
+                        android:text="@string/result_calificacion"
+                        android:textColor="#000000"
                         android:textSize="19sp"
                         android:textStyle="bold"
                         android:fontFamily="sans-serif-medium" />
@@ -102,7 +102,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Llevas un avance total del:"
+                        android:text="@string/result_avance_total"
                         android:textColor="#78909C"
                         android:textSize="13sp"
                         android:layout_marginBottom="16dp" />
@@ -123,7 +123,8 @@
                             android:id="@+id/txtPercentage"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="100%"
+                            android:text="@string/result_cargando"
+                            tools:text="100%"
                             android:textColor="@android:color/black"
                             android:textSize="28sp"
                             android:textStyle="bold"
@@ -133,7 +134,7 @@
                             android:id="@+id/txtAcerts"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Aciertos: 10 de 10 preguntas correctas."
+                            android:text="@string/cargando"
                             android:textColor="@android:color/black"
                             android:textSize="12sp"
                             android:fontFamily="sans-serif-medium" />
@@ -144,8 +145,8 @@
                         android:id="@+id/txtFeedbackTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="¡Ya lo tienes!"
-                        android:textColor="?attr/appTextColor"
+                        tools:text="@string/feedback_aprobado_titulo"
+                        android:textColor="#000000"
                         android:textSize="15sp"
                         android:textStyle="bold"
                         android:fontFamily="sans-serif-medium"
@@ -156,7 +157,7 @@
                         android:id="@+id/txtFeedbackMessage"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Muy bien, lo has conseguido, has demostrado ser una persona apta."
+                        tools:text="@string/result_salud_bien"
                         android:textColor="#78909C"
                         android:textSize="13sp"
                         android:fontFamily="sans-serif"
@@ -168,4 +169,4 @@
         </LinearLayout>
     </ScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

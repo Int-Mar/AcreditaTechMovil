@@ -33,7 +33,7 @@
             android:id="@+id/txtUserName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="David Marlon Malagon Fuentes"
+            android:text="@string/header_user_default"
             android:textColor="?attr/appTextColor"
             android:textSize="22sp"
             android:textStyle="bold"
@@ -43,119 +43,66 @@
             android:id="@+id/txtGuideSubtype"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Guía Técnica"
+            android:text="@string/guia_tecnica"
             android:textColor="#78909C"
             android:textSize="14sp"
             android:fontFamily="sans-serif" />
     </LinearLayout>
 
-    <!-- TARJETA BLANCA DE CONTENIDO CON SCROLL -->
-    <androidx.cardview.widget.CardView
+    <!-- ENCABEZADO DE LA SECCIÓN (técnica u ocupacional) -->
+    <TextView
+        android:id="@+id/txtGuideTitleHeader"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:layout_marginTop="12dp"
-        android:layout_marginBottom="16dp"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="8dp"
-        app:cardBackgroundColor="?attr/appCardColor"
+        android:background="#386B90"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="@string/guias_de_tu_oficio"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/layoutUserTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- MENSAJE DE ESTADO: cargando, sin conexión, error o sin guías -->
+    <TextView
+        android:id="@+id/txtGuiasEstado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="@string/cargando"
+        android:textColor="?attr/appTextColor"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/txtGuideTitleHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- LISTA DE GUÍAS: una tarjeta por guía (item_guia.xml) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerGuias"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:clipToPadding="false"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="8dp"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/txtGuideTitleHeader"
         app:layout_constraintBottom_toTopOf="@id/includeBottomNav"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <!-- ENCABEZADO DEL TÍTULO DE LA GUÍA (Cambia color con Java/XML) -->
-            <TextView
-                android:id="@+id/txtGuideTitleHeader"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#386B90"
-                android:padding="12dp"
-                android:gravity="center"
-                android:text="Título"
-                android:textColor="@android:color/black"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:fontFamily="sans-serif-medium" />
-
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fillViewport="true">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="20dp"
-                    android:background="@android:color/white">
-
-                    <!-- PRIMER BLOQUE DE TEXTO / PÁRRAFOS -->
-                    <TextView
-                        android:id="@+id/txtGuideParagraph1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="--------------------------------------------------\n--------------------------------------------------\n--------------------------------------------------"
-                        android:textColor="#333333"
-                        android:textSize="14sp"
-                        android:textAlignment="center"
-                        android:lineSpacingExtra="6dp"
-                        android:layout_marginBottom="16dp" />
-
-                    <!-- CONTENEDOR DE DOS IMÁGENES -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        android:layout_marginBottom="16dp">
-
-                        <ImageView
-                            android:id="@+id/imgGuide1"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:layout_marginEnd="8dp"
-                            android:background="#1B2E3C"
-                            android:padding="12dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/logoblanco"
-                            android:contentDescription="Imagen 1" />
-
-                        <ImageView
-                            android:id="@+id/imgGuide2"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:layout_marginStart="8dp"
-                            android:background="#1B2E3C"
-                            android:padding="12dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/logoblanco"
-                            android:contentDescription="Imagen 2" />
-                    </LinearLayout>
-
-                    <!-- SEGUNDO BLOQUE DE TEXTO / PÁRRAFOS -->
-                    <TextView
-                        android:id="@+id/txtGuideParagraph2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="--------------------------------------------------\n--------------------------------------------------\n--------------------------------------------------\n--------------------------------------------------\n--------------------------------------------------\n--------------------------------------------------"
-                        android:textColor="#333333"
-                        android:textSize="14sp"
-                        android:textAlignment="center"
-                        android:lineSpacingExtra="6dp" />
-
-                </LinearLayout>
-            </ScrollView>
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:listitem="@layout/item_guia"
+        tools:visibility="visible" />
 
     <!-- BARRA INFERIOR REUTILIZABLE -->
     <include

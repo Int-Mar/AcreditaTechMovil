@@ -1,31 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AcreditaTech</string>
-    <string name="desc_logo_acreditatech">Logo AcreditaTech</string>
+    <string name="app_name" translatable="false">AcreditaTech</string>
+    <string name="desc_logo_acreditatech">AcreditaTech logo</string>
 
-    <!-- Textos para el Panel de Usuario -->
-    <string name="user_panel_title">Panel de usuario</string>
-    <string name="user_panel_subtitle">Menú Principal</string>
-    <string name="test_tecnico_title">Test Técnico</string>
-    <string name="test_ocupacional_title">Test Ocupacional</string>
-    <string name="test_final">Test Final</string>
-    <string name="guias_title">Guías</string>
+    <!-- Encabezado, barra inferior y mini menú -->
+    <string name="header_user_default">Worker</string>
+    <string name="nav_menu">Menu</string>
+    <string name="nav_inicio">Home</string>
+    <string name="nav_constancia">Certificate</string>
+    <string name="nav_perfil">Profile</string>
+    <string name="menu_cambiar_tema">Change theme</string>
+    <string name="menu_cerrar_sesion">Log out</string>
 
-    <string name="test_visualize_desc">Visualiza tu resultado obtenido</string>
-    <string name="btn_visualizar">Visualizar</string>
-    <string name="btn_entrar">Entrar</string>
+    <!-- Panel de usuario (menú principal) -->
+    <string name="user_panel_title">My dashboard</string>
+    <string name="user_panel_subtitle">Main menu</string>
+    <string name="test_tecnico_title">Technical Test</string>
+    <string name="test_ocupacional_title">Occupational Test</string>
+    <string name="test_final">Final Test</string>
+    <string name="guias_title">Guides</string>
+    <string name="test_visualize_desc">View your result</string>
+    <string name="btn_visualizar">View</string>
+    <string name="btn_entrar">Enter</string>
+    <string name="avance_cargando">Loading your progress…</string>
+    <string name="avance_porcentaje">Your progress: %1$d%%</string>
+    <string name="avance_tecnica">Technical: %1$s</string>
+    <string name="avance_salud">Health: %1$s</string>
+    <string name="estado_aprobada">Passed</string>
+    <string name="estado_apta">Fit</string>
+    <string name="estado_pendiente">Pending</string>
 
-    <!-- Textos para la Pantalla de Login -->
-    <string name="bg_top_desc">Fondo superior decorativo</string>
-    <string name="bg_bottom_desc">Fondo inferior decorativo</string>
-    <string name="logo_institutional_desc">Logo institucional</string>
-    <string name="login_title">Iniciar Sesión</string>
-    <string name="login_email_label">Correo electrónico</string>
-    <string name="login_email_hint">ejemplo: juanpg@gmail.com</string>
-    <string name="login_password_label">Contraseña</string>
-    <string name="login_password_hint">Mínimo 8 caracteres</string>
+    <!-- Login -->
+    <string name="bg_top_desc">Decorative top background</string>
+    <string name="bg_bottom_desc">Decorative bottom background</string>
+    <string name="logo_institutional_desc">Institutional logo</string>
+    <string name="login_title">Log in</string>
+    <string name="login_email_label">Email</string>
+    <string name="login_email_hint">example: juanpg@gmail.com</string>
+    <string name="login_password_label">Password</string>
+    <string name="login_password_hint">At least 8 characters</string>
 
-    <!-- Textos para la Pantalla de terminos -->
-    <string name="Terms">Términos y Condiciones</string>
-    <string name="Terms_cont">Aquí van todos los terminos y condiciones</string>
+    <!-- Términos -->
+    <string name="Terms">Terms and Conditions</string>
+    <string name="Terms_cont">By signing in to AcreditaTech, you agree to the autonomous evaluation
+        of your technical competencies and occupational health. Your data will be used exclusively
+        for certification purposes under the independent workers program for the boroughs of
+        Azcapotzalco and Miguel Hidalgo.</string>
+    <string name="terms_aceptar">Accept and continue</string>
 
+    <!-- Conexión con el servidor -->
+    <string name="cargando">Connecting to the server…</string>
+    <string name="error_sin_conexion">Could not connect. Please wait a moment and try again.</string>
+    <string name="error_login">Incorrect email or password. Please check your details.</string>
+    <string name="error_campos_vacios">Enter your email and password.</string>
+    <string name="error_solo_trabajador">The admin panel is only available on the website.</string>
+    <string name="error_sesion_expirada">Your session has ended. Please log in again.</string>
+
+    <!-- Guías -->
+    <string name="guias_lee_tu_guia">Read your guide</string>
+    <string name="btn_ver_guia">View guide</string>
+    <string name="guia_tecnica">Technical Guide</string>
+    <string name="guia_ocupacional">Occupational Guide</string>
+    <string name="guias_de_tu_oficio">Guides for your trade</string>
+    <string name="guias_tecnicas_titulo">Technical guides for your trade</string>
+    <string name="guias_salud_titulo">Occupational health guides</string>
+    <string name="guias_sin_conexion">You need an internet connection to see your guides.</string>
+    <string name="guias_vacias">There are no guides for your trade yet.</string>
+    <string name="guia_numero">Guide %1$d of %2$d</string>
+    <string name="guia_generica">Guide %1$d</string>
+    <string name="guia_infografia">Suggested infographic: %1$s</string>
+    <string name="titulo_guia">Instalaciones eléctricas residenciales</string>
+
+    <!-- Pre-Constancia -->
+    <string name="constancia_title">Pre-Certificate</string>
+    <string name="constancia_avatar_desc">Document avatar</string>
+    <string name="constancia_otorga">Awarded to:</string>
+    <string name="constancia_linea_vacia" translatable="false">--------------------------------------------------</string>
+    <string name="btn_descargar_constancia">Download Pre-Certificate</string>
+    <string name="constancia_vencida">Pre-Certificate expired</string>
+    <string name="constancia_motivo">For completing your technical and occupational health training.</string>
+    <string name="constancia_codigo">Code: %1$s</string>
+    <string name="constancia_estado">Status: %1$s</string>
+    <string name="constancia_emitida">Issued: %1$s</string>
+    <string name="constancia_vigente_hasta">Valid until: %1$s</string>
+    <string name="constancia_aviso">Informational document: it does not replace an official certification.</string>
+    <string name="constancia_aprobaste">You passed both assessments.</string>
+    <string name="constancia_puedes_generar">You can now generate and download your Pre-Certificate.</string>
+    <string name="constancia_bloqueada">Complete your assessments on the website to unlock this</string>
+    <string name="constancia_descargando">Downloading…</string>
+    <string name="constancia_guardada">Pre-Certificate saved to Downloads</string>
+    <string name="constancia_sin_conexion">You need a connection to download your Pre-Certificate.</string>
+
+    <!-- Resultados de los tests -->
+    <string name="result_titulo_tecnico">Technical Test Score</string>
+    <string name="result_titulo_ocupacional">Occupational Test Result</string>
+    <string name="result_titulo_general">Overall progress</string>
+    <string name="result_calificacion">Score:</string>
+    <string name="result_avance_total">Your total progress is:</string>
+    <string name="result_cargando" translatable="false">…</string>
+    <string name="result_puntos">%1$.0f points</string>
+    <string name="result_estado_intentos">Status: %1$s · Attempts: %2$d</string>
+    <string name="result_intentos">Attempts: %1$d</string>
+    <string name="result_porcentaje">%1$d%%</string>
+    <string name="result_tecnica_bien">You passed the technical assessment.</string>
+    <string name="result_tecnica_mal">Review your study guides and try again on the website.</string>
+    <string name="result_salud_bien">You have shown that you are fit for the job.</string>
+    <string name="result_salud_mal">You need more preparation. Review the occupational guide.</string>
+    <string name="result_general_bien">You completed your assessments. You can now download your Pre-Certificate.</string>
+    <string name="result_general_falta">You still need to pass %1$s on the website.</string>
+    <string name="result_falta_salud">the health assessment</string>
+    <string name="result_falta_tecnica">the technical assessment</string>
+    <string name="result_falta_ambas">both assessments</string>
+    <string name="feedback_sin_hacer_titulo">Not taken yet</string>
+    <string name="feedback_sin_hacer_mensaje">Tests are taken on the AcreditaTech website.</string>
+    <string name="feedback_aprobado_titulo">You got it!</string>
+    <string name="feedback_reprobado_titulo">Keep trying</string>
+
+    <!-- Perfil -->
+    <string name="perfil_oficio_default">TRADE</string>
+    <string name="perfil_correo_fijo">Email cannot be changed</string>
+    <string name="perfil_alcaldia_hint">Work borough</string>
+    <string name="perfil_alcaldia_fija">Borough cannot be changed</string>
+    <string name="perfil_guardar">Save changes</string>
+    <string name="perfil_hacer_cambios">Edit profile</string>
+    <string name="perfil_actualizado">Profile updated successfully</string>
+    <string name="perfil_nombre_hint">Full name</string>
+    <string name="perfil_telefono_hint">Phone (10 digits, starts with 55)</string>
+    <string name="perfil_cancelar">Cancel</string>
+    <string name="perfil_foto_desc">Profile photo</string>
+
+    <!-- Validaciones (mismas reglas que el servidor) -->
+    <string name="val_nombre_vacio">Enter your name</string>
+    <string name="val_nombre_longitud">Name must be between 5 and 25 characters</string>
+    <string name="val_nombre_letras">Name can only contain letters and spaces</string>
+    <string name="val_telefono_vacio">Enter your phone number</string>
+    <string name="val_telefono_numeros">Phone number can only contain digits</string>
+    <string name="val_telefono_55">Phone number must start with 55</string>
+    <string name="val_telefono_10">Phone number must have 10 digits</string>
+    <string name="val_correo_vacio">Enter your email</string>
+    <string name="val_correo_espacios">Email cannot contain spaces</string>
+    <string name="val_correo_largo">Email cannot be longer than 50 characters</string>
+    <string name="val_correo_sin_arroba">Email is missing the @</string>
+    <string name="val_correo_dos_arrobas">Email can only have one @</string>
+    <string name="val_correo_sin_usuario">The part before the @ is missing</string>
+    <string name="val_correo_usuario" formatted="false">Only letters, numbers and . _ % + - are allowed before the @</string>
+    <string name="val_correo_sin_dominio">The domain after the @ is missing (example: gmail.com)</string>
+    <string name="val_correo_dominio">The email domain is not valid</string>
+    <string name="val_correo_gmail">Use your Gmail account (@gmail.com)</string>
+    <string name="val_contrasena_vacia">Enter your password</string>
+    <string name="val_contrasena_corta">Password must be at least 8 characters</string>
+    <string name="val_contrasena_larga">Password cannot be longer than 20 characters</string>
 </resources>

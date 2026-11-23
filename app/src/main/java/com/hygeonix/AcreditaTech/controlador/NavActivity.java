@@ -1,4 +1,4 @@
-package com.hygeonix.AcreditaTech;
+package com.hygeonix.AcreditaTech.controlador;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -7,12 +7,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.PopupWindow;
-import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.SwitchCompat;
+
+import com.hygeonix.AcreditaTech.R;
+import com.hygeonix.AcreditaTech.util.Red;
+import com.hygeonix.AcreditaTech.util.TemaManager;
 
 public class NavActivity {
 
     public static void setupNav(Activity activity) {
+
+        // Nombre del trabajador en el encabezado de la pantalla (si lo tiene)
+        Red.mostrarNombre(activity);
 
         // Botón Menú (navMenu) -> Abre el mini menú flotante de ancho completo
         View navMenu = activity.findViewById(R.id.navMenu);
@@ -31,28 +37,24 @@ public class NavActivity {
 
                 // Configurar el Switch de tema dentro del mini menú
                 SwitchCompat switchTheme = popupView.findViewById(R.id.switchTheme);
-                int currentMode = AppCompatDelegate.getDefaultNightMode();
-                switchTheme.setChecked(currentMode == AppCompatDelegate.MODE_NIGHT_YES);
+                // Marca el switch según cómo se ve la app ahora (elección guardada o tema del teléfono)
+                switchTheme.setChecked(TemaManager.estaEnOscuro(activity));
 
                 View layoutToggle = popupView.findViewById(R.id.layoutToggleTheme);
                 layoutToggle.setOnClickListener(view -> {
                     boolean newState = !switchTheme.isChecked();
                     switchTheme.setChecked(newState);
-                    if (newState) {
-                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-                    } else {
-                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-                    }
                     popupWindow.dismiss();
+                    // Guarda la elección para que se recuerde al volver a abrir la app
+                    TemaManager.guardarTema(activity, newState);
                 });
 
                 // Botón Cerrar Sesión dentro del mini menú
                 View layoutLogout = popupView.findViewById(R.id.layoutLogout);
                 layoutLogout.setOnClickListener(view -> {
                     popupWindow.dismiss();
-                    Intent intent = new Intent(activity, TermsActivity.class);
-                    activity.startActivity(intent);
-                    activity.finish();
+                    // Borra el token y regresa al login sin dejar pantallas atrás
+                    Red.irAlLogin(activity);
                 });
 
                 // Para mostrar el mini menú flotando arriba de la barra de navegación

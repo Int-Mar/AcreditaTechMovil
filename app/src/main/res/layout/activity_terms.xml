@@ -103,7 +103,7 @@
                 android:id="@+id/btnAcceptTerms"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:text="Aceptar y continuar"
+                android:text="@string/terms_aceptar"
                 android:textColor="@android:color/white"
                 android:textAllCaps="false"
                 android:fontFamily="sans-serif-medium"
@@ -139,4 +139,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

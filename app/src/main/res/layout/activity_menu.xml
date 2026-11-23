@@ -35,6 +35,7 @@
 
             <!-- Título: Panel de usuario -->
             <TextView
+                android:id="@+id/txtPanelTitulo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/user_panel_title"
@@ -50,6 +51,66 @@
                 android:textColor="#78909C"
                 android:textSize="14sp"
                 android:layout_marginBottom="16dp" />
+
+            <!-- TARJETA DE AVANCE (se llena con GET /api/avance) -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="?attr/appCardColor">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/txtAvancePorcentaje"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/avance_cargando"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:id="@+id/progressAvance"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:layout_marginTop="12dp"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/bg_progress_avance" />
+
+                    <TextView
+                        android:id="@+id/txtAvanceEstatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:textColor="#78909C"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/txtEstadoTecnica"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textColor="#000000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/txtEstadoSalud"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
             <!-- TARJETA 1: Test Técnico -->
             <androidx.cardview.widget.CardView
@@ -129,51 +190,6 @@
 
                     <Button
                         android:id="@+id/btnVisualizarOcupacional"
-                        android:layout_width="match_parent"
-                        android:layout_height="48dp"
-                        android:text="@string/btn_visualizar"
-                        android:textColor="@android:color/white"
-                        android:textAllCaps="false"
-                        android:fontFamily="sans-serif-medium"
-                        android:backgroundTint="@color/btn_general"
-                        app:cornerRadius="8dp" />
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!-- TARJETA 3: Guías -->
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                app:cardCornerRadius="14dp"
-                app:cardElevation="4dp"
-                app:cardBackgroundColor="?attr/appCardColor">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/test_final"
-                        android:textColor="#000000"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/test_visualize_desc"
-                        android:textColor="#78909C"
-                        android:textSize="13sp"
-                        android:layout_marginBottom="12dp" />
-
-                    <Button
-                        android:id="@+id/btnVisualizarFinal"
                         android:layout_width="match_parent"
                         android:layout_height="48dp"
                         android:text="@string/btn_visualizar"

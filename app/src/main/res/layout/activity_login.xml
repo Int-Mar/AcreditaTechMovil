@@ -128,8 +128,21 @@
                 android:inputType="textEmailAddress"
                 android:autofillHints="emailAddress"
                 android:paddingHorizontal="12dp"
-                android:textSize="13sp"
-                android:layout_marginBottom="12dp" />
+                android:textSize="13sp" />
+
+            <!-- Error al instante (se muestra desde LoginActivity) -->
+            <TextView
+                android:id="@+id/tvEmailError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="#D32F2F"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="12dp" />
 
             <!-- Etiqueta Contraseña -->
             <TextView
@@ -153,8 +166,21 @@
                 android:inputType="textPassword"
                 android:autofillHints="password"
                 android:paddingHorizontal="12dp"
-                android:textSize="13sp"
-                android:layout_marginBottom="24dp" />
+                android:textSize="13sp" />
+
+            <!-- Error al instante (se muestra desde LoginActivity) -->
+            <TextView
+                android:id="@+id/tvPasswordError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="#D32F2F"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="24dp" />
 
             <!-- Botón de Iniciar Sesión -->
             <Button
@@ -171,4 +197,4 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

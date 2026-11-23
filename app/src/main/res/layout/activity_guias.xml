@@ -33,7 +33,7 @@
             android:id="@+id/txtUserName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="David Marlon Malagon Fuentes"
+            android:text="@string/header_user_default"
             android:textColor="?attr/appTextColor"
             android:textSize="22sp"
             android:textStyle="bold"
@@ -43,7 +43,7 @@
             android:id="@+id/txtSectionTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Guías"
+            android:text="@string/guias_title"
             android:textColor="#78909C"
             android:textSize="14sp"
             android:fontFamily="sans-serif" />
@@ -85,7 +85,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Test Técnico"
+                        android:text="@string/test_tecnico_title"
                         android:textColor="#000000"
                         android:textSize="16sp"
                         android:textStyle="bold"
@@ -94,7 +94,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Lee tu guía"
+                        android:text="@string/guias_lee_tu_guia"
                         android:textColor="#78909C"
                         android:textSize="12sp"
                         android:layout_marginBottom="14dp"
@@ -105,7 +105,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="48dp"
                         android:backgroundTint="@color/btn_general"
-                        android:text="Ver Guía"
+                        android:text="@string/btn_ver_guia"
                         android:textAllCaps="false"
                         android:textColor="@android:color/white"
                         android:textSize="13sp"
@@ -133,7 +133,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Test Ocupacional"
+                        android:text="@string/test_ocupacional_title"
                         android:textColor="#000000"
                         android:textSize="16sp"
                         android:textStyle="bold"
@@ -142,7 +142,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Lee tu guía"
+                        android:text="@string/guias_lee_tu_guia"
                         android:textColor="#78909C"
                         android:textSize="12sp"
                         android:layout_marginBottom="14dp"
@@ -153,7 +153,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="48dp"
                         android:backgroundTint="@color/btn_general"
-                        android:text="Ver Guía"
+                        android:text="@string/btn_ver_guia"
                         android:textAllCaps="false"
                         android:textColor="@android:color/white"
                         android:textSize="13sp"
@@ -176,4 +176,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

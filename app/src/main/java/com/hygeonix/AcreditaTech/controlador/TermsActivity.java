@@ -1,9 +1,11 @@
-package com.hygeonix.AcreditaTech;
+package com.hygeonix.AcreditaTech.controlador;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.hygeonix.AcreditaTech.R;
 
 public class TermsActivity extends AppCompatActivity {
 
