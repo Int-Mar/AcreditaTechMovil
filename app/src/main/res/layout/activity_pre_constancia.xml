@@ -33,7 +33,7 @@
             android:id="@+id/txtUserName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="David Marlon Malagon Fuentes"
+            android:text="@string/header_user_default"
             android:textColor="?attr/appTextColor"
             android:textSize="22sp"
             android:textStyle="bold"
@@ -43,7 +43,7 @@
             android:id="@+id/txtSectionSubtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pre-Constancia"
+            android:text="@string/constancia_title"
             android:textColor="#B0BEC5"
             android:textSize="14sp"
             android:fontFamily="sans-serif" />
@@ -89,7 +89,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
                         android:layout_centerVertical="true"
-                        android:text="Pre-Constancia"
+                        android:text="@string/constancia_title"
                         android:textColor="#1D3E5B"
                         android:textSize="16sp"
                         android:textStyle="bold"
@@ -107,7 +107,7 @@
                         <ImageView
                             android:layout_width="28dp"
                             android:layout_height="28dp"
-                            android:contentDescription="Logo Azul"
+                            android:contentDescription="@string/desc_logo_acreditatech"
                             android:src="@drawable/logoazul" />
 
                         <TextView
@@ -115,7 +115,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="4dp"
                             android:fontFamily="serif"
-                            android:text="AcreditaTech"
+                            android:text="@string/app_name"
                             android:textColor="#1D3E5B"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -139,7 +139,7 @@
                         android:src="@drawable/perfil"
                         app:tint="#253A49"
                         android:padding="12dp"
-                        android:contentDescription="Avatar Documento" />
+                        android:contentDescription="@string/constancia_avatar_desc" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -150,7 +150,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Se le otorga a:"
+                            android:text="@string/constancia_otorga"
                             android:textColor="#555555"
                             android:textSize="12sp"
                             android:fontFamily="sans-serif" />
@@ -159,7 +159,7 @@
                             android:id="@+id/txtRecipientName"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="David Gael Malagon Fuentes"
+                            android:text="@string/header_user_default"
                             android:textColor="@android:color/black"
                             android:textSize="14sp"
                             android:textStyle="bold"
@@ -172,7 +172,7 @@
                     android:id="@+id/txtConstanciaLine1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="--------------------------------------------------"
+                    android:text="@string/constancia_linea_vacia"
                     android:textColor="#333333"
                     android:textSize="13sp"
                     android:layout_marginBottom="12dp"
@@ -182,7 +182,7 @@
                     android:id="@+id/txtConstanciaLine2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="--------------------------------------------------"
+                    android:text="@string/constancia_linea_vacia"
                     android:textColor="#333333"
                     android:textSize="13sp"
                     android:layout_marginBottom="12dp"
@@ -192,7 +192,7 @@
                     android:id="@+id/txtConstanciaLine3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="--------------------------------------------------"
+                    android:text="@string/constancia_linea_vacia"
                     android:textColor="#333333"
                     android:textSize="13sp"
                     android:layout_marginBottom="12dp"
@@ -202,7 +202,7 @@
                     android:id="@+id/txtConstanciaLine4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="--------------------------------------------------"
+                    android:text="@string/constancia_linea_vacia"
                     android:textColor="#333333"
                     android:textSize="13sp"
                     android:layout_marginBottom="12dp"
@@ -212,7 +212,7 @@
                     android:id="@+id/txtConstanciaLine5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="--------------------------------------------------"
+                    android:text="@string/constancia_linea_vacia"
                     android:textColor="#333333"
                     android:textSize="13sp"
                     android:layout_marginBottom="12dp"
@@ -222,7 +222,7 @@
                     android:id="@+id/txtConstanciaLine6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="--------------------------------------------------"
+                    android:text="@string/constancia_linea_vacia"
                     android:textColor="#333333"
                     android:textSize="13sp"
                     android:gravity="center" />
@@ -240,7 +240,7 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="12dp"
         android:backgroundTint="#1D3E5B"
-        android:text="Descargar Pre-Constancia"
+        android:text="@string/btn_descargar_constancia"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
         android:textSize="13sp"
@@ -260,4 +260,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

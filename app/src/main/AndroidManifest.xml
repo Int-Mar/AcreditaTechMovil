@@ -2,7 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- La app habla con el servidor de Render (https) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
+        android:name=".AcreditaTechApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -13,7 +18,7 @@
         android:theme="@style/Theme.AcreditaTech">
 
         <!-- Pantalla de Inicio / Splash -->
-        <activity android:name=".MainActivity" android:exported="true">
+        <activity android:name=".controlador.MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -21,16 +26,16 @@
         </activity>
 
         <!-- Pantallas de Autenticación y Flujo Inicial -->
-        <activity android:name=".TermsActivity" android:exported="false" />
-        <activity android:name=".LoginActivity" android:exported="false" />
+        <activity android:name=".controlador.TermsActivity" android:exported="false" />
+        <activity android:name=".controlador.LoginActivity" android:exported="false" />
 
         <!-- Pantallas Principales de la Barra de Navegación -->
-        <activity android:name=".MenuActivity" android:exported="false" />
-        <activity android:name=".TestResultActivity" android:exported="false" />
-        <activity android:name=".GuidesActivity" android:exported="false" />
-        <activity android:name=".DetalleGuiaActivity" android:exported="false" />
-        <activity android:name=".ConstanciaActivity" android:exported="false" />
-        <activity android:name=".PerfilActivity" android:exported="false" />
+        <activity android:name=".controlador.MenuActivity" android:exported="false" />
+        <activity android:name=".controlador.TestResultActivity" android:exported="false" />
+        <activity android:name=".controlador.GuidesActivity" android:exported="false" />
+        <activity android:name=".controlador.DetalleGuiaActivity" android:exported="false" />
+        <activity android:name=".controlador.ConstanciaActivity" android:exported="false" />
+        <activity android:name=".controlador.PerfilActivity" android:exported="false" />
 
     </application>
 

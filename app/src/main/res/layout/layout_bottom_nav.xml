@@ -15,7 +15,7 @@
         android:layout_weight="1"
         android:padding="16dp"
         android:src="@drawable/menu"
-        android:contentDescription="Menú"
+        android:contentDescription="@string/nav_menu"
         android:background="?attr/selectableItemBackground"
         android:clickable="true"
         android:focusable="true" />
@@ -28,7 +28,7 @@
         android:layout_weight="1"
         android:padding="16dp"
         android:src="@drawable/inicio"
-        android:contentDescription="Inicio"
+        android:contentDescription="@string/nav_inicio"
         android:background="?attr/selectableItemBackground"
         android:clickable="true"
         android:focusable="true" />
@@ -41,7 +41,7 @@
         android:layout_weight="1"
         android:padding="16dp"
         android:src="@drawable/guias"
-        android:contentDescription="Guías"
+        android:contentDescription="@string/guias_title"
         android:background="?attr/selectableItemBackground"
         android:clickable="true"
         android:focusable="true" />
@@ -54,7 +54,7 @@
         android:layout_weight="1"
         android:padding="16dp"
         android:src="@drawable/preconstancia"
-        android:contentDescription="Constancia"
+        android:contentDescription="@string/nav_constancia"
         android:background="?attr/selectableItemBackground"
         android:clickable="true"
         android:focusable="true" />
@@ -67,9 +67,9 @@
         android:layout_weight="1"
         android:padding="16dp"
         android:src="@drawable/perfil"
-        android:contentDescription="Perfil"
+        android:contentDescription="@string/nav_perfil"
         android:background="?attr/selectableItemBackground"
         android:clickable="true"
         android:focusable="true" />
 
-</LinearLayout>
+</LinearLayout>
