@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Español (México). Debe tener las mismas claves que values/strings.xml -->
+<resources>
+    <string name="desc_logo_acreditatech">Logo de AcreditaTech</string>
+
+    <!-- Encabezado, barra inferior y mini menú -->
+    <string name="header_user_default">Trabajador</string>
+    <string name="nav_menu">Menú</string>
+    <string name="nav_inicio">Inicio</string>
+    <string name="nav_constancia">Constancia</string>
+    <string name="nav_perfil">Perfil</string>
+    <string name="menu_cambiar_tema">Cambiar tema</string>
+    <string name="menu_cerrar_sesion">Cerrar sesión</string>
+
+    <!-- Panel de usuario (menú principal) -->
+    <string name="user_panel_title">Mi panel</string>
+    <string name="user_panel_subtitle">Menú principal</string>
+    <string name="test_tecnico_title">Test Técnico</string>
+    <string name="test_ocupacional_title">Test Ocupacional</string>
+    <string name="test_final">Test Final</string>
+    <string name="guias_title">Guías</string>
+    <string name="test_visualize_desc">Visualiza tu resultado obtenido</string>
+    <string name="btn_visualizar">Visualizar</string>
+    <string name="btn_entrar">Entrar</string>
+    <string name="avance_cargando">Cargando tu avance…</string>
+    <string name="avance_porcentaje">Tu avance: %1$d%%</string>
+    <string name="avance_tecnica">Técnica: %1$s</string>
+    <string name="avance_salud">Salud: %1$s</string>
+    <string name="estado_aprobada">Aprobada</string>
+    <string name="estado_apta">Apta</string>
+    <string name="estado_pendiente">Pendiente</string>
+
+    <!-- Login -->
+    <string name="bg_top_desc">Fondo superior decorativo</string>
+    <string name="bg_bottom_desc">Fondo inferior decorativo</string>
+    <string name="logo_institutional_desc">Logo institucional</string>
+    <string name="login_title">Iniciar sesión</string>
+    <string name="login_email_label">Correo electrónico</string>
+    <string name="login_email_hint">ejemplo: juanpg@gmail.com</string>
+    <string name="login_password_label">Contraseña</string>
+    <string name="login_password_hint">Mínimo 8 caracteres</string>
+
+    <!-- Términos -->
+    <string name="Terms">Términos y Condiciones</string>
+    <string name="Terms_cont">Al iniciar sesión en AcreditaTech aceptas la evaluación autónoma de tus
+        competencias técnicas y de salud ocupacional. Tu información será usada únicamente para fines
+        de certificación dentro del programa de trabajadores independientes de las alcaldías
+        Azcapotzalco y Miguel Hidalgo.</string>
+    <string name="terms_aceptar">Aceptar y continuar</string>
+
+    <!-- Conexión con el servidor -->
+    <string name="cargando">Conectando con el servidor…</string>
+    <string name="error_sin_conexion">No se pudo conectar. Espera un momento e intenta de nuevo.</string>
+    <string name="error_login">Correo electrónico o contraseña incorrectos. Verifica tus datos.</string>
+    <string name="error_campos_vacios">Escribe tu correo y tu contraseña.</string>
+    <string name="error_solo_trabajador">El panel de administración solo está disponible en la página web.</string>
+    <string name="error_sesion_expirada">Tu sesión terminó. Inicia sesión de nuevo.</string>
+
+    <!-- Guías -->
+    <string name="guias_lee_tu_guia">Lee tu guía</string>
+    <string name="btn_ver_guia">Ver guía</string>
+    <string name="guia_tecnica">Guía Técnica</string>
+    <string name="guia_ocupacional">Guía Ocupacional</string>
+    <string name="guias_de_tu_oficio">Guías de tu oficio</string>
+    <string name="guias_tecnicas_titulo">Guías técnicas de tu oficio</string>
+    <string name="guias_salud_titulo">Guías de salud ocupacional</string>
+    <string name="guias_sin_conexion">Necesitas conexión a internet para ver tus guías.</string>
+    <string name="guias_vacias">Todavía no hay guías para tu oficio.</string>
+    <string name="guia_numero">Guía %1$d de %2$d</string>
+    <string name="guia_generica">Guía %1$d</string>
+    <string name="guia_infografia">Infografía sugerida: %1$s</string>
+    <string name="titulo_guia">Instalaciones eléctricas residenciales</string>
+
+    <!-- Pre-Constancia -->
+    <string name="constancia_title">Pre-Constancia</string>
+    <string name="constancia_avatar_desc">Avatar del documento</string>
+    <string name="constancia_otorga">Se le otorga a:</string>
+    <string name="btn_descargar_constancia">Descargar Pre-Constancia</string>
+    <string name="constancia_vencida">Pre-Constancia vencida</string>
+    <string name="constancia_motivo">Por haber completado su preparación técnica y de salud ocupacional.</string>
+    <string name="constancia_codigo">Código: %1$s</string>
+    <string name="constancia_estado">Estado: %1$s</string>
+    <string name="constancia_emitida">Emitida: %1$s</string>
+    <string name="constancia_vigente_hasta">Vigente hasta: %1$s</string>
+    <string name="constancia_aviso">Documento informativo: no sustituye una certificación oficial.</string>
+    <string name="constancia_aprobaste">Aprobaste tus dos evaluaciones.</string>
+    <string name="constancia_puedes_generar">Ya puedes generar y descargar tu Pre-Constancia.</string>
+    <string name="constancia_bloqueada">Completa tus evaluaciones en la web para desbloquear esto</string>
+    <string name="constancia_descargando">Descargando…</string>
+    <string name="constancia_guardada">Pre-Constancia guardada en Descargas</string>
+    <string name="constancia_sin_conexion">Necesitas conexión para descargar tu Pre-Constancia.</string>
+
+    <!-- Resultados de los tests -->
+    <string name="result_titulo_tecnico">Calificación de Test Técnico</string>
+    <string name="result_titulo_ocupacional">Resultado de Test Ocupacional</string>
+    <string name="result_titulo_general">Avance general</string>
+    <string name="result_calificacion">Calificación:</string>
+    <string name="result_avance_total">Llevas un avance total del:</string>
+    <string name="result_puntos">%1$.0f puntos</string>
+    <string name="result_estado_intentos">Estado: %1$s · Intentos: %2$d</string>
+    <string name="result_intentos">Intentos: %1$d</string>
+    <string name="result_porcentaje">%1$d%%</string>
+    <string name="result_tecnica_bien">Aprobaste la evaluación técnica.</string>
+    <string name="result_tecnica_mal">Revisa tus guías de estudio y vuelve a intentarlo en la web.</string>
+    <string name="result_salud_bien">Has demostrado ser una persona apta.</string>
+    <string name="result_salud_mal">Necesitas reforzamiento. Revisa la guía ocupacional.</string>
+    <string name="result_general_bien">Completaste tus evaluaciones. Ya puedes descargar tu Pre-Constancia.</string>
+    <string name="result_general_falta">Te falta aprobar %1$s en la web.</string>
+    <string name="result_falta_salud">la evaluación de salud</string>
+    <string name="result_falta_tecnica">la evaluación técnica</string>
+    <string name="result_falta_ambas">las dos evaluaciones</string>
+    <string name="feedback_sin_hacer_titulo">Aún no lo haces</string>
+    <string name="feedback_sin_hacer_mensaje">Los tests se hacen en la página web de AcreditaTech.</string>
+    <string name="feedback_aprobado_titulo">¡Ya lo tienes!</string>
+    <string name="feedback_reprobado_titulo">Sigue intentando</string>
+
+    <!-- Perfil -->
+    <string name="perfil_oficio_default">OFICIO</string>
+    <string name="perfil_correo_fijo">El correo no se puede cambiar</string>
+    <string name="perfil_alcaldia_hint">Alcaldía de trabajo</string>
+    <string name="perfil_alcaldia_fija">La alcaldía no se puede cambiar</string>
+    <string name="perfil_guardar">Guardar cambios</string>
+    <string name="perfil_hacer_cambios">Hacer cambios</string>
+    <string name="perfil_actualizado">Perfil actualizado correctamente</string>
+    <string name="perfil_nombre_hint">Nombre completo</string>
+    <string name="perfil_telefono_hint">Teléfono (10 dígitos, inicia con 55)</string>
+    <string name="perfil_cancelar">Cancelar</string>
+    <string name="perfil_foto_desc">Foto de perfil</string>
+
+    <!-- Validaciones (mismas reglas que el servidor) -->
+    <string name="val_nombre_vacio">Escribe tu nombre</string>
+    <string name="val_nombre_longitud">El nombre debe tener entre 5 y 25 caracteres</string>
+    <string name="val_nombre_letras">El nombre solo puede tener letras y espacios</string>
+    <string name="val_telefono_vacio">Escribe tu teléfono</string>
+    <string name="val_telefono_numeros">El teléfono solo puede tener números</string>
+    <string name="val_telefono_55">El teléfono debe iniciar con 55</string>
+    <string name="val_telefono_10">El teléfono debe tener 10 dígitos</string>
+    <string name="val_correo_vacio">Escribe tu correo electrónico</string>
+    <string name="val_correo_espacios">El correo no puede tener espacios</string>
+    <string name="val_correo_largo">El correo no puede pasar de 50 caracteres</string>
+    <string name="val_correo_sin_arroba">Al correo le falta el @</string>
+    <string name="val_correo_dos_arrobas">El correo solo puede tener un @</string>
+    <string name="val_correo_sin_usuario">Falta lo que va antes del @</string>
+    <string name="val_correo_usuario" formatted="false">Antes del @ solo se permiten letras, números y . _ % + -</string>
+    <string name="val_correo_sin_dominio">Falta el dominio después del @ (ejemplo: gmail.com)</string>
+    <string name="val_correo_dominio">El dominio del correo no es válido</string>
+    <string name="val_correo_gmail">Usa tu cuenta de Gmail (@gmail.com)</string>
+    <string name="val_contrasena_vacia">Escribe tu contraseña</string>
+    <string name="val_contrasena_corta">La contraseña debe tener al menos 8 caracteres</string>
+    <string name="val_contrasena_larga">La contraseña no puede pasar de 20 caracteres</string>
+</resources>
