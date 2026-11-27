@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Barra de avance del menú. Colores fijos porque la tarjeta es blanca
+     en modo claro y en modo oscuro (si no, en oscuro la barra no se ve). -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Fondo (lo que falta) -->
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <corners android:radius="4dp" />
+            <solid android:color="#D6DEE5" />
+        </shape>
+    </item>
+    <!-- Avance -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape android:shape="rectangle">
+                <corners android:radius="4dp" />
+                <solid android:color="#1D3E5B" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>
